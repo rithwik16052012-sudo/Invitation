@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212; /* Dark brick-like background color */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial Black', sans-serif;
+    overflow: hidden; /* Prevents scrollbars from flying particles */
+}
+
+/* Fixes the canvas behind all HTML content */
+#graffitiCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; 
+}
+
+/* Translucent content box so the animation peeks through slightly */
+.content-box {
+    background-color: rgba(18, 18, 18, 0.85); 
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    border: 3px solid #00ffcc;
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.5);
+    pointer-events: none; /* Allows clicks to pass through to the canvas */
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-shadow: 3px 3px #ff0055;
+}
